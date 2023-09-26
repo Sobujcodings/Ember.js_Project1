@@ -1,7 +1,221 @@
-{{page-title "MyEmberApp"}}
+{{!-- ekhane jah likhbo sheta shob page ei thakbe --}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+{{!-- header --}}
+<div class="d-flex gap-5 bg-danger ">
+    <div>
+        <LinkTo class="text-decoration-none text-white btn border-0 fs-3 px-4" @route="HomeBanner">
+            SuperRentals
+        </LinkTo>
+    </div>
+    <div class="">
+        <LinkTo class="btn text-white border-0 fs-6 my-2" @route="about">About</LinkTo>
+        <LinkTo class="btn text-white border-0 fs-6 my-2" @route="contack">Contack</LinkTo>
+    </div>
+</div>
 
-{{outlet}}
+
+{{!-- banner --}}
+{{!-- <div class=" d-flex mx-3 my-2 bg-body-tertiary mb-4">
+    <div class=" my-auto mx-auto w-75 ps-5">
+        <h1 class=" title fw-bolder w-full ">Welcome to Super Rentals!</h1>
+        <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+        <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+            <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
+        </button>
+    </div>
+    <div class=" mx-auto w-25">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+            alt="">
+    </div>
+</div> --}}
+
+
+
+{{!-- ata baniye component r jekhane dekhabo sekhane yeild diye boshiye dibo --}}
+{{!-- <About>
+    <h1>hello from app</h1>
+    <div class="d-flex mx-3 my-2 bg-body-tertiary mb-4">
+        <div class=" my-auto mx-auto w-75 ps-5">
+            <h1 class=" title fw-bolder w-full">Welcome to Super Rentals!</h1>
+            <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+            <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+                <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
+            </button>
+        </div>
+        <div class="mx-auto w-25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+                alt="">
+        </div>
+    </div>
+    {{outlet}}
+</About> --}}
+
+
+
+
+{{!-- Banner --}}
+<div class=" d-flex mx-3 my-2 bg-body-tertiary mb-4">
+    {{!-- <div class=" my-auto mx-auto w-75 ps-5">
+        <h1 class=" title fw-bolder w-full ">Welcome to Super Rentals!</h1>
+        <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+        <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+            <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
+        </button>
+    </div>
+    <div class=" mx-auto w-25">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+            alt="">
+    </div> --}}
+    {{outlet}}
+</div>
+{{!-- porer route gula te gele shei route r template(hbs) gula ekhane dekhabe --}}
+
+
+
+
+{{!-- input section --}}
+<div class="mx-auto w-50 my-5">
+    <div class="text-center">
+        <label class="my-2 fs-5" for="">Where would you like to stay?</label><br>
+        <input type="search" class="w-75" name="" id="">
+    </div>
+</div>
+
+
+
+{{!-- card --}}
+<div class="container bg-body-tertiary mb-4 ">
+    <div class="row p-4">
+
+        {{!-- image and text from component>rental>image hbs file(here to reuse) --}}
+        <Rental::Image></Rental::Image>
+
+
+
+        <div class="col-6 col-lg-8 px-0 px-lg-5 w-lg-50">
+            <h6 class="text-primary bold mt-2 mb-4">Grand Old Mansion</h6>
+            <div class="row ">
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col text-center my-auto">
+            <img class="w-100 w-lg-50 h-sm-100 h-lg-100 p-0 p-lg-2 "
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+                alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container bg-body-tertiary mb-4 ">
+    <div class="row p-4">
+
+        {{!-- image and text from component>rental>image hbs file(here to reuse) --}}
+        <Rental::Image></Rental::Image>
+
+
+        <div class="col-6 col-lg-8 px-0 px-lg-5 w-lg-50">
+            <h6 class="text-primary bold mt-2 mb-4">Grand Old Mansion</h6>
+            <div class="row ">
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col text-center my-auto">
+            <img class="w-100 w-lg-50 h-sm-100 h-lg-100 p-0 p-lg-2 "
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+                alt="">
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container bg-body-tertiary mb-4 ">
+    <div class="row p-4">
+
+
+        {{!-- image and text from component>rental>image hbs file(here to reuse) --}}
+        <Rental::Image></Rental::Image>
+        {{!-- reusable component --}}
+
+
+        <div class="col-6 col-lg-8 px-0 px-lg-5 w-lg-50 ">
+            <h6 class="text-primary bold mt-2 mb-4">Grand Old Mansion</h6>
+            <div class="row ">
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+                <div class="col">
+                    <p>Owner: Veruca Salt</p>
+                    <p>Owner: Veruca Salt</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col text-center my-auto">
+            <img class="w-100 w-lg-50 h-sm-100 h-lg-100 p-0 p-lg-2 "
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+                alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+{{!-- <div>
+    <div class="container bg-body-tertiary mb-4 ">
+        <div class="row p-4">
+            <div class="col text-center">
+                <img class="w-50 h-75 p-2"
+                    src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS3FBrqRG44RRT8TBxbKt_8LE4DYFlRmlvFp4sahItMQZM5Y8DJ"
+                    alt="">
+                <p class="text-center">View larger</p>
+            </div>
+
+            <div class="col-8 px-auto px-5 w-50 px-auto">
+                <h6 class="text-primary bold mt-2 mb-4">Grand Old Mansion</h6>
+                <div class="row ">
+                    <div class="col gap-2">
+                        <p>Owner: Veruca Salt</p>
+                        <p>Owner: Veruca Salt</p>
+                    </div>
+                    <div class="col">
+                        <p>Owner: Veruca Salt</p>
+                        <p>Owner: Veruca Salt</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col text-center">
+                <img class="w-50 h-100 p-2 text-center"
+                    src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+
+
+{{!-- <MyComponent></MyComponent> --}}

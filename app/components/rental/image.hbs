@@ -1,0 +1,27 @@
+{{!-- 
+click korle state change hobe mane islarge change hobe sheta ai btn e korbo sheta js file e jabe change hoye then abr ekhane shetar refrence use koray ekhano shei unushare dekhabe 
+--}}
+{{#if this.isLarge}}
+       <div>
+         <div class="col text-center my-auto">
+            <img class="w-100 h-100 w-lg-100 h-lg-100 p-0 p-lg-2"
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS3FBrqRG44RRT8TBxbKt_8LE4DYFlRmlvFp4sahItMQZM5Y8DJ"
+                alt="">
+            {{!-- <p class="text-center">View Smaller</p> --}}
+
+            {{!-- btn e click korle this.togglesize action k press kore dibo press korle sheta ulta jabe r ulte gele true hobe true howay true r style gulo dekhabo --}}
+            <button type="button" class="text-center btn text-primary" {{on "click" this.toggleSize}} >View Smaller</button>
+        </div>
+       </div>
+    {{else}}
+        <div class="col text-center my-auto">
+            <img class="w-100 h-100 w-lg-50 h-lg-100 p-0 p-lg-2"
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS3FBrqRG44RRT8TBxbKt_8LE4DYFlRmlvFp4sahItMQZM5Y8DJ"
+                alt="">
+            {{!-- <p class="text-center">View larger</p> --}}
+
+            {{!-- btn e click korle this.togglesize action k press kore dibo press korle sheta ulta jabe r ulte gele true hobe true howay true r style gulo dekhabo --}}
+            <button type="button" class="text-center btn text-primary" {{on "click" this.toggleSize}} >View larger</button>
+        </div>
+{{/if}}
+
