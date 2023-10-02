@@ -55,7 +55,6 @@
     "ember-cli-terser": "^4.0.2",
     "ember-data": "~5.2.0",
     "ember-decorators": "^6.1.1",
-    "ember-fetch": "^8.1.2",
     "ember-load-initializers": "^2.1.2",
     "ember-modifier": "^4.1.0",
     "ember-page-title": "^8.0.0",
@@ -88,5 +87,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "ember-fetch": "^8.1.2"
   }
 }

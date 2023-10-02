@@ -1,0 +1,29 @@
+{{!-- input --}}
+<div class="mx-auto w-50 my-5">
+    <div class="text-center">
+        <label>
+            <label class="my-2 fs-5">Where would you like to stay?</label><br>
+            {{!-- <Input @value={{this.query}} {{on "input" this.handleInput}}/>* this dile js r cls sathe connect hobe --}}
+            <Input class="w-100" @value={{this.inputValue}}  {{on "input" this.handleInput}}/>
+
+            {{!-- @value={{this.inputValue}} mane akhn theke niye abar ekhanei shei input e dekhiye dilam --}}
+            {{!-- @value={{this.inputValue}}  padhabo anchi 2tai korci ekhane *** this mane card-filter.js r class --}}
+            {{!-- {{on "input" this.handleInput}} adds an event listener to the <Input> component. 
+            It listens for the "input" event, which is triggered when the user interacts with the input field 
+            (e.g., typing or pasting text). When the "input" event occurs, 
+            it calls the handleInput action defined in the current component 
+            (this.handleInput mane ai function k refer kore) ai input e onlick korle ai funciton run/action hobe--}}
+
+            {{!-- input e jah dibo sheta hobe query update korbe shei query k abar ekhane eshe dekhabo to way binding --}}
+            {{!-- value ta hobe query(search.js r query) r value ekhane input dile shei query te jeye save hobe sekhan theke abar this.equery dile anlam (this mane search.js r function this function) --}}
+        </label>
+    </div>
+</div>
+
+{{!-- final filterd card from card-filter.js cls component (this.filtercards is the filtered-card )--}}
+{{!-- this.filterCards means jeta return pabo sheta ashbe--}}
+{{#each this.filterCards as | card | }}
+    <Imagedata @data={{card}}></Imagedata>
+{{/each}}
+{{!-- imagedata compo te padhiye diye single card guloke sekhane style kore dilam --}}
+{{!-- ekhane *** this mane card-filter.js r class --}}

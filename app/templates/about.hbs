@@ -1,13 +1,27 @@
 {{page-title "About"}}
+{{!-- about contack r shob data amra ei jumbo common component e padhiye style kore dibo jekhane drkr atake
+<jumkbo> boshiye dibo tahole component kom lagbe ata reuse korte parbo jah jah lage vhitore diye padhiye dibo
+    sheta ei yeild e boshe jabe (contack, about theke onno component e padhlae aro kichu o add korte parbo) --}}
 
-<div class=" my-auto mx-auto w-75 ps-5">
-    <h1 class=" title fw-bolder w-full ">About Super Rentals</h1>
-    <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
-    <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
-        <LinkTo class="text-white text-decoration-none" @route="contack">Contack</LinkTo>
-    </button>
-</div>
-<div class=" mx-auto w-25">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
-        alt="">
-</div>
+    {{!-- <Jumbo class=""> --}}
+        <div class="d-flex mx-3 my-2 bg-body-tertiary mb-4">
+            <div class=" my-auto mx-auto w-75 ps-5">
+                <h1 class=" title fw-bolder w-full ">About Super Rentals</h1>
+                <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+                <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+                    <LinkTo class="text-white text-decoration-none" @route="contack">Contack</LinkTo>
+                </button>
+            </div>
+            <div class=" mx-auto w-25">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+                    alt="">
+            </div>
+        </div>
+        {{!--
+    </Jumbo> --}}
+
+    {{!-- @model data from about route (shob card k ene padhiye dilam shob card filter hobe sekhane route e ai cards jeye type korle)--}}
+    <div>
+        <CardFilter @cards={{@model}}> </CardFilter>
+    </div>
+    {{!-- about.hbs > card-filter.route/card-filter.hbs 2ta tei jabe --}}

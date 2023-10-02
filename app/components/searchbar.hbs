@@ -1,0 +1,45 @@
+{{!-- input section --}}
+{{!-- rental = imagedata, rentals = searchbar --}}
+
+{{!-- card filter component class.js e shob padhabo (jei card guloke filter korbo) r
+return kore dibo filter korar por ja pabo shetake dekhabo abar ai cardfilter component r nechei each kore --}}
+{{!-- @cardData diye shob card(@data k pass kore dilam jeta index.hbs theke paicilam) k pass kore dilam
+shetake recieve kore filter korbo * input field r value takeo padhate hobe jar upor depend kore filter korbo
+--}}
+{{!-- * input and card shob gula ai card-filer component e kora hoice (card gula diye dilam jeta k filter korbo)--}}
+
+
+<div>
+    <CardFilter @cards={{@data}}> </CardFilter>
+</div>
+
+
+{{!-- @cards={{@data}} ata k js r function e  ebhabe revieve korbo ai argument k const { cards } = this.args; --}}
+
+{{!-- *** ai argument shei component.hbs eo jabe component cls eo jabe(js e this.args diye recieve korte hobe)
+r hbs component e direct @card diye recieve korte parbo --}}
+
+
+
+{{!-- this.query
+whenever the user types something into the input box, this.query changes accordingly. In other words, this.query is kept
+in sync with the value of what is being searched; we finally have the perfect way of storing the state of our search
+query
+--}}
+
+
+{{!-- 2ta argumnet padhacchi cardfilter component e reieve kore kaj korbo --}}
+{{!-- card filter r data/return data card-filter r hbs ei use korte pabo shetake abar ekhane render kore dilei hobe --}}
+{{!-- this.inputValue ata peyechi search.js r funciton theke --}}
+
+
+
+{{!-- card --}}
+{{!-- ata amre ebhabe direct na diye search r search input r sathe connect kore dibo --}}
+{{!-- <div>
+    {{#each @data as |singledata|}}
+    <Imagedata @data={{singledata}}></Imagedata>
+    {{/each}}
+</div> --}}
+{{!-- akhn search bar k dynamic korbo then shtar titile r namer sathe match hole filter kore shetake dkehabo ekahne
+@data shob datar jaygay --}}

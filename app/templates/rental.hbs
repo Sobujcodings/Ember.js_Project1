@@ -1,0 +1,49 @@
+{{page-title "Rental"}}
+{{outlet}}
+{{page-title "HomeBanner"}}
+{{!-- {{outlet}} --}}
+<div class="d-flex mx-3 my-2 bg-body-tertiary mb-4">
+    <div class=" my-auto mx-auto w-75 ps-5">
+        <h1 class=" title fw-bolder w-full ">Welcome to Super Rentals!</h1>
+        <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+        <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+            <LinkTo class="text-white text-decoration-none" @route="index">Share Twitter</LinkTo>
+        </button>
+    </div>
+    <div class=" mx-auto w-25">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+            alt="">
+    </div>
+</div>
+
+{{!-- ekhane amra rental.js theke je @model e oi nirdesto data id diye fetch kore padhiyeci sheta ekahne dekhabo --}}
+
+
+<div class="container bg-body-tertiary mb-4 ">
+    <div class="row p-4">
+
+        {{!-- image and text from component>rental>image hbs file(here to reuse) --}}
+        <Rental::Image></Rental::Image>
+
+        <div class="col-6 col-lg-8 px-0 px-lg-5 w-lg-50">
+            <div class="row ">
+                <div class="">
+                    <h4>About {{@model.attributes.title}}</h4>
+                    <p>Owner: {{@model.attributes.owner}}</p>
+                    <p>type: {{@model.type}}</p>
+                </div>
+                <div class="">
+                    <p>location: {{@model.attributes.location.lat}}</p>
+                    <p>bedrooms:{{@model.attributes.bedrooms}}</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam fugiat porro, eaque esse doloremque dicta quasi quae magni eum? Impedit ab aspernatur eius porro voluptatibus. Quisquam saepe dolorem impedit neque.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class=" mx-auto text-center">
+        <img class=" w-100 h-25"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+            alt="">
+    </div>
+</div>

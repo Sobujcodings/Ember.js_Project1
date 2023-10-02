@@ -1,0 +1,41 @@
+{{!-- documentation e imagedata.hbs k rental.hbs bolche --}}
+{{!-- ekhan theke abar @data k padhate chaile @model = @data diye padhiye dibo --}}
+{{!-- @data == @rental --}}
+
+{{!-- card --}}
+<div class="container bg-body-tertiary mb-4 ">
+    <div class="row p-4">
+
+        {{!-- image and text from component>rental>image hbs file(here to reuse) --}}
+        <Rental::Image></Rental::Image>
+
+        <div class="col-6 col-lg-8 px-0 px-lg-5 w-lg-50">
+
+            {{!-- <LinkTo @route="rental" @model={{@data}}>{{@data.attributes.title}}</LinkTo> --}}
+            {{!-- ai route e jabe and ai data niye jabe jeta index.js>index.hbs theke paichi ekhaene --}}
+            {{!-- ekhn rental nam e route khule sekhane dynamic id diye data fetch korbo sheta akta component
+            e dekhabo shei card details ai data jabe shei route>shei component e dekhao details--}}
+
+            <LinkTo @route="rental" @model={{@data}}>
+                <h6 class="text-primary bold mt-2 mb-4">{{@data.attributes.title}}</h6>
+            </LinkTo>
+
+            <div class="row ">
+                <div class="col">
+                    <p>Owner: {{@data.attributes.owner}}</p>
+                    <p>city: {{@data.attributes.city}}</p>
+                </div>
+                <div class="col">
+                    <p>location: {{@data.attributes.location.lat}}</p>
+                    <p>bedrooms: {{@data.attributes.bedrooms}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col text-center my-auto">
+            <img class="w-100 w-lg-50 h-sm-100 h-lg-100 p-0 p-lg-2 "
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfbgfEe0F0MGL8N9DHptMBjz-j1aUTtMkQl9bvmUfcM8TjxeK7"
+                alt="">
+        </div>
+    </div>
+</div>

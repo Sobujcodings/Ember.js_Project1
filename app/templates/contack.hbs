@@ -1,12 +1,22 @@
 {{page-title "Contack"}}
-<div class=" my-auto mx-auto w-75 ps-5">
-    <h1 class=" title fw-bolder w-full">Contack Us</h1>
-    <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
-    <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
-        <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
-    </button>
-</div>
-<div class=" mx-auto w-25">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
-        alt="">
+{{!-- content guloke direct na boshiye jumbo component e padhiye dilam shie yeild e shob giye boshbe --}}
+    <div class="d-flex mx-3 my-2 bg-body-tertiary mb-4">
+        <div class=" my-auto mx-auto w-75 ps-5">
+            <h1 class=" title fw-bolder w-full">Contack Us</h1>
+            <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+            <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+                <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
+            </button>
+        </div>
+        <div class=" mx-auto w-25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+                alt="">
+        </div>
+    </div>
+
+{{!-- *** age route(card-filter.js) e jabe ai @cards then route theke filter kore cardfilter.hbs e nibo --}}
+{{!-- @model route theke fetch kore @model k mane return kora value ta pacchi shetake abr cardfilter.route/hbs 2ta padhiye filter kore nibo --}}
+
+<div>
+    <CardFilter @cards={{@model}}> </CardFilter>
 </div>

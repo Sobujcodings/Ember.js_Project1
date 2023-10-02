@@ -1,0 +1,66 @@
+{{!-- 
+index.js route(fetch_data) > index.hbs(shogula_foreach_kore imagedatay_padhano) > imagedata(each_single_item/card)
+                                                 index.hbs(passing_all_data)    > rentals(component_foreach kore<imagedata> te prottek ta k abar  te padhiye dibe tahole imagedata shei onujayi data dekhabe akta card holo aktai 2ta hole 2ta)  
+--}}
+
+
+
+{{!-- index e jah thakbe shetai root file e dekhabe(mane shob page ei dekhabe r ki) --}}
+{{page-title "Index"}}
+{{!-- {{outlet}} --}}
+
+{{!-- ekhane same jumbo diye shob content k jumbo te pass korche
+shudhu jeta shudhu extra root route e thakbe sheta beshi diche
+r root route jehetu(mane shob route e jehetu application ei jabe dekhabe outlet deyay so atao shob route e dekhabe auto)
+--}}
+
+{{page-title "HomeBanner"}}
+{{!-- {{outlet}} --}}
+<div class="d-flex mx-3 my-2 bg-body-tertiary mb-4">
+    <div class=" my-auto mx-auto w-75 ps-5">
+        <h1 class=" title fw-bolder w-full ">Welcome to Super Rentals!</h1>
+        <p class="fs-5">We hope you find exactly what you are looking for in a place to stay</p>
+        <button type="button" class="btn btn-primary btn-md px-5 py-2 fw-bolder text-white">
+            <LinkTo class="text-white text-decoration-none" @route="about">About Us</LinkTo>
+        </button>
+    </div>
+    <div class=" mx-auto w-25">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxszoj9oqPxej-YEpa7WHcUnpVDqrmVt_8cg&usqp=CAU"
+            alt="">
+    </div>
+</div>
+
+
+{{!-- docs e searchbar mane rentals component (@data holo ekhane whole data take each korbo next compo then singlegula arek compo te dekhabo)--}}
+<Searchbar @data={{@model}}></Searchbar>
+{{!-- searchbar ta k alada component e niye gelam sekhanei each kore shob gula card/3ta card dekhabo 
+tokhon abar ekhane foreach korbo nah direct input e jeye korbo, prothome 3ta dekhbo search korle she onujayi chng hobe--}}
+
+
+
+{{!-- <Imagedata @data={{@model}}></Imagedata>
+<Imagedata @data={{@model}}></Imagedata>
+<Imagedata @data={{@model}}></Imagedata> --}}
+
+{{!-- dynamic ()--}}
+{{!-- api diye fetch kore anay amdr loop kore 3ta dekhate hobe(padhate hobe) --}}
+{{!-- <div>
+        {{#each @model as |item|}}
+        <Imagedata @data={{item}}></Imagedata> 
+        {{/each}}
+</div> --}}
+
+{{!-- <li><Rental @rental={{@model}} /></li> --}}
+{{!-- * <li><Rental @rental={{rental}} /></li> --}}
+{{!-- jeta ai rental/imagedata component e pabo sheta abar mane @rental k sheta k abar @model nam diye onno component/link keo padhiye dite parbo --}}
+{{!-- ai @data k abar @mode nam diye onno compo/link eo padhye dite parbo it contains all the item details --}}
+
+
+{{!-- @data nam diye argument ta padhalam  --}}
+{{!-- ekhane console.log(@model.data)/(parsed.data);  = (3) [{…}, {…}, {…}]   3ta tai 3bar loop hobe each korle 3ta pabo--}}
+{{!-- karon function ta model shetar moddhei return korechiyechi tai model nam e ekahne use korbo--}}
+
+
+{{!-- data nam diye argument ta padhalam sheta diyei use korbo next e data nam diyei --}}
+{{!-- ai card gula root eo thakbe mane shob route eo thakbe tai ekhabe dibo --}}
+{{!-- card --}}
